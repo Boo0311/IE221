@@ -23,7 +23,7 @@ class Cockroach:
         self.current_frame = 0
         self.animation_timer = 0
 
-    def define_spawn_pos(self, size): # define the start pos and moving vel of the cockroach
+    def define_spawn_pos(self, size): # xác định vận tốc và vị trí của đối tượng
         vel = random.uniform(COCKROACH_MOVE_SPEED["min"], COCKROACH_MOVE_SPEED["max"])
         moving_direction = random.choice(("left", "right", "up", "down"))
         if moving_direction == "right":
@@ -45,7 +45,7 @@ class Cockroach:
         self.rect.move_ip(self.vel)
 
 
-    def animate(self): # change the frame of the insect when needed
+    def animate(self): # thay đổi frame của đối tượng khi cần thiết
         t = time.time()
         if t > self.animation_timer:
             self.animation_timer = t + ANIMATION_SPEED

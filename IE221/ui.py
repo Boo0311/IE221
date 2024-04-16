@@ -10,11 +10,11 @@ def draw_text(surface, text, pos, color, font=FONTS["medium"], pos_mode="top_lef
     elif pos_mode == "center":
         label_rect.center = pos
 
-    if shadow: # make the shadow
+    if shadow: # Tạo bóng
         label_shadow = font.render(text, 1, shadow_color)
         surface.blit(label_shadow, (label_rect.x - shadow_offset, label_rect.y + shadow_offset))
 
-    surface.blit(label, label_rect) # draw the text
+    surface.blit(label, label_rect) # Xuất chữ
 
 
 
@@ -28,14 +28,14 @@ def button(surface, pos_y, text=None, click_sound=None):
     else:
         color = COLORS["buttons"]["default"]
 
-    pygame.draw.rect(surface, COLORS["buttons"]["shadow"], (rect.x - 6, rect.y - 6, rect.w, rect.h)) # draw the shadow rectangle
-    pygame.draw.rect(surface, color, rect) # draw the rectangle
+    pygame.draw.rect(surface, COLORS["buttons"]["shadow"], (rect.x - 6, rect.y - 6, rect.w, rect.h)) 
+    pygame.draw.rect(surface, color, rect)
     # draw the text
     if text is not None:
         draw_text(surface, text, rect.center, COLORS["buttons"]["text"], pos_mode="center",
                     shadow=True, shadow_color=COLORS["buttons"]["shadow"])
 
-    if on_button and pygame.mouse.get_pressed()[0]: # if the user press on the button
-        if click_sound is not None: # play the sound if needed
+    if on_button and pygame.mouse.get_pressed()[0]: # Tạo tiếng khi người chơi ấn nút
+        if click_sound is not None: 
             click_sound.play()
         return True

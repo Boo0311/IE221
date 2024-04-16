@@ -24,6 +24,6 @@ class Insects(Cockroach):
         self.animation_timer = 0
         
 
-    def kill(self, mosquitos): # remove the mosquito from the list
-        mosquitos.remove(self)
+    def kill(self, Cockroach): # remove the mosquito from the list
+        Cockroach.remove(self)
         return -INSECTS_PENALITY
