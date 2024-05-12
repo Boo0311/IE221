@@ -3,8 +3,8 @@ import time
 import random
 from settings import *
 from background import Background
-#from hand import Hand
-#from hand_tracking import HandTracking
+from hand import Hand
+from hand_tracking import HandTracking
 from cockroach import Cockroach
 from insects import Insects
 import cv2
