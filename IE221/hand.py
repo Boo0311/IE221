@@ -6,9 +6,9 @@ import cv2
 
 class Hand:
     def __init__(self):
-        self.orig_image = image.load("Assets/snapedit_1712624426740.png", size=(100,200))
+        self.orig_image = image.load("Assets/Tools/snapedit_1712624426740.png", size=(100,200))
         self.image = self.orig_image.copy()
-        self.image_smaller = image.load("Assets/snapedit_1712624426740.png", size=(100 - 30, 200 - 30))
+        self.image_smaller = image.load("Assets/Tools/snapedit_1712624426740.png", size=(100 - 30, 200 - 30))
         self.rect = pygame.Rect(SCREEN_WIDTH//2, SCREEN_HEIGHT//2, HAND_HITBOX_SIZE[0], HAND_HITBOX_SIZE[1])
         self.left_click = False
         #self.hand_tracking = HandTracking()
