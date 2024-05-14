@@ -14,7 +14,7 @@ HAND_SIZE = 100
 HAND_HITBOX_SIZE = (60,80)
 COCKROACH_SIZES = (80, 80)
 COCKROACH_SIZE_RANDOMIZE = (1,2) # Với mỗi đối tượng được tạo mới sẽ ngẫu nhiên lựa chọn giữa giá trị 1 và 2
-INSECTS_SIZES = (50, 50)
+INSECTS_SIZES = (85, 85)
 INSECTS_SIZE_RANDOMIZE = (1.2, 1.5)
 
 # drawing

@@ -4,7 +4,7 @@ from settings import *
 
 class Background: # Tạo background cho trò chơi
     def __init__(self):
-        self.image = image.load("Assets/Background/background.jpg", size=(SCREEN_WIDTH, SCREEN_HEIGHT),
+        self.image = image.load("Assets/Background/1835.jpg", size=(SCREEN_WIDTH, SCREEN_HEIGHT),
                                 convert="default")
 
 

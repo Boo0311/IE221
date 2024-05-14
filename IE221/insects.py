@@ -15,11 +15,11 @@ class Insects(Cockroach):
         self.rect = pygame.Rect(start_pos[0], start_pos[1], size[0]//1.4, size[1]//1.4)
         # Load hình ảnh tùy theo hướng di chuyển của đối tượng
         if moving_direction in ["right", "left"]: #right or left direction
-            self.images = [image.load("Assets/Insects/1.png", size=size, flip=moving_direction=="right")]
+            self.images = [image.load("Assets/Insects/cartoonspider_right.png", size=size, flip=moving_direction=="right")]
         elif moving_direction == "up": #up
-            self.images = [image.load("Assets/Insects/2.png", size=size)]
+            self.images = [image.load("Assets/Insects/cartoonspider_up.png", size=size)]
         else:  # down
-            self.images = [image.load("Assets/Insects/3.png", size=size)]
+            self.images = [image.load("Assets/Insects/cartoonspider_down.png", size=size)]
         self.current_frame = 0
         self.animation_timer = 0
         

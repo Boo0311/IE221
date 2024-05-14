@@ -11,12 +11,12 @@ class Hand:
         self.image_smaller = image.load("Assets/Tools/snapedit_1712624426740.png", size=(100 - 30, 200 - 30))
         self.rect = pygame.Rect(SCREEN_WIDTH//2, SCREEN_HEIGHT//2, HAND_HITBOX_SIZE[0], HAND_HITBOX_SIZE[1])
         self.left_click = False
-        #self.hand_tracking = HandTracking()
+        
 
 
-    def follow_mouse(self): # change the hand pos center at the mouse pos
+    def follow_mouse(self): # thay đổi vị trí của con chuột dựa trên chuyển động của tay.
         self.rect.center = pygame.mouse.get_pos()
-        #self.hand_tracking.display_hand()
+        
 
     def follow_mediapipe_hand(self, x, y):
         self.rect.center = (x, y)
@@ -32,11 +32,11 @@ class Hand:
             self.draw_hitbox(surface)
 
 
-    def on_insect(self, insects): # return a list with all insects that collide with the hand hitbox
+    def on_insect(self, insects): # trả lại list các đối tượng đang nằm trong phạm vi tính điểm của con trỏ
         return [insect for insect in insects if self.rect.colliderect(insect.rect)]
 
 
-    def kill_insects(self, insects, score, sounds): # will kill the insects that collide with the hand when the left mouse button is pressed
+    def kill_insects(self, insects, score, sounds): # tiêu diệt đối tượng đang nằm trong pạm vi hitbox của con trỏ khi nhấn chuột trái
         if self.left_click: # if left click
             for insect in self.on_insect(insects):
                 insect_score = insect.kill(insects)
