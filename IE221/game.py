@@ -26,8 +26,8 @@ class Game:
 
 
     def reset(self): # reset all the needed variables
-       # self.hand_tracking = HandTracking()
-        #self.hand = Hand()
+        self.hand_tracking = HandTracking()
+        self.hand = Hand()
         self.insects = []
         self.insects_spawn_timer = 0
         self.score = 0
