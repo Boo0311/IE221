@@ -1,6 +1,6 @@
 import pygame
 
-WINDOW_NAME = "Cockroach Exterminator"
+WINDOW_NAME = "Cockroach's Hunter"
 GAME_TITLE = WINDOW_NAME
 
 SCREEN_WIDTH, SCREEN_HEIGHT = 1200, 700
